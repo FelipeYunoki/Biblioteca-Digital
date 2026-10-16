@@ -1,0 +1,625 @@
+:root {
+    --cor-secundaria: #0875B9;
+    --cor-principal: #07598C;
+    --cor-escura: #063B5C;
+    --cor-destaque: #25B66A;
+    --cor-branca: #ffffff;
+    --cor-texto: #1f2937;
+    --cor-texto-claro: #DCEAF2;
+    --cor-fundo-claro: #F1F7FA;
+
+    --raio: 15px;
+    --sombra: 0 12px 35px rgba(7, 15, 63, 0.12);
+    --largura: 1160px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    background: var(--cor-branca);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--largura);
+    margin: 0 auto;
+}
+
+/* === CABEÇALHO === */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 70px;
+    background: var(--cor-branca);
+}
+
+.logo img {
+    width: 230px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-escura);
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* === BANNER PRINCIPAL ==== */
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+    padding: 55px 70px;
+    min-height: 470px;
+    background: var(--cor-principal);
+    color: var(--cor-branca);
+}
+
+.banner-conteudo {
+    min-width: 0;
+}
+
+.sobre-titulo {
+    color: var(--cor-destaque);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.banner h1 {
+    color: var(--cor-branca);
+    font-size: 62px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.banner-conteudo > p:not(.sobre-titulo) {
+    color: var(--cor-texto-claro);
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.banner-imagem {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: var(--raio);
+}
+
+.banner-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 8px;
+    color: var(--cor-branca);
+    background: var(--cor-destaque);
+    font-weight: 700;
+}
+
+.botao:hover {
+    background: #1d9b59;
+    transform: translateY(-2px);
+}
+
+/* === TÍTULOS DAS SEÇÕES === */
+.titulo-secao {
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    color: var(--cor-escura);
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.titulo-secao h2 span {
+    color: var(--cor-destaque);
+}
+
+.descricao-secao {
+    max-width: 650px;
+    margin-top: 12px;
+}
+
+.titulo-claro h2 {
+    color: var(--cor-branca);
+}
+
+.titulo-claro .descricao-secao {
+    color: var(--cor-texto);
+}
+
+/* === SEÇÃO SOBRE ==== */
+.sobre {
+    padding: 82px 70px;
+    background: var(--cor-escura);
+    color: var(--cor-texto-claro);
+}
+
+.sobre .titulo-secao h2 {
+    color: var(--cor-branca);
+}
+
+.sobre-grade {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-texto p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.imagem-sobre {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+/* === CARTÕES DE DESTAQUE ==== */
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.cartao-destaque {
+    padding: 25px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--raio);
+    color: var(--cor-texto-claro);
+}
+
+.cartao-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.icone {
+    display: inline-block;
+    color: var(--cor-destaque);
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.cartao-destaque h3 {
+    color: var(--cor-branca);
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.cartao-destaque p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* === BANNER SECUNDÁRIO ==== */
+.banner-secundario {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.banner-secundario img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === SEÇÃO LIVROS === */
+.livros {
+    padding: 82px 70px;
+    background: var(--cor-branca);
+    color: var(--cor-texto);
+}
+
+.livros-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.livro {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--cor-branca);
+    border: 1px solid #e5edf2;
+    border-radius: var(--raio);
+    box-shadow: 0 5px 18px rgba(7, 15, 63, 0.07);
+}
+
+.livro:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.livro > img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.livro-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: calc(100% - 230px);
+    padding: 22px;
+}
+
+.titulo-secao h2 {
+    color: var(--cor-texto);
+}
+
+.livro-info h3 {
+    color: var(--cor-escura);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.livro-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.link-livro {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-principal);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.link-livro:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* === SEÇÃO UNIDADES === */
+.unidades {
+    padding: 82px 70px;
+    background: var(--cor-fundo-claro);
+}
+
+.unidades-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.unidade {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(7, 89, 140, 0.1);
+    border-radius: var(--raio);
+}
+
+.unidade img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.unidade h3 {
+    color: var(--cor-escura);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.unidade p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.unidade-legenda {
+    display: inline-block;
+    color: var(--cor-principal);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* === SEÇÃO CONTATOS ==== */
+.contatos {
+    padding: 78px 70px;
+    background: var(--cor-branca);
+}
+
+.contato-grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.contato-texto h2 {
+    color: var(--cor-escura);
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contato-texto > p:not(.sobre-titulo) {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.contato-texto strong {
+    display: block;
+    color: var(--cor-escura);
+    margin-bottom: 20px;
+}
+
+.contato-texto .botao {
+    margin-top: 5px;
+}
+
+.contato-imagem {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+
+/* === RESPONSIVIDADE - TABLETS === */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 18px 32px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .banner {
+        padding: 45px 32px;
+        gap: 30px;
+    }
+
+    .banner h1 {
+        font-size: 46px;
+    }
+
+    .sobre,
+    .livros,
+    .unidades,
+    .contatos {
+        padding: 60px 32px;
+    }
+
+    .sobre-grade {
+        gap: 28px;
+    }
+
+    .destaques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .livros-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .titulo-secao h2 {
+        font-size: 35px;
+    }
+
+    .contato-grade {
+        gap: 30px;
+    }
+}
+
+
+/* === RESPONSIVIDADE - CELULARES === */
+@media (max-width: 680px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .logo img {
+        width: 190px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 28px;
+    }
+
+    .banner h1 {
+        font-size: 38px;
+    }
+
+    .banner-conteudo > p:not(.sobre-titulo) {
+        font-size: 16px;
+    }
+
+    .banner-imagem {
+        height: 240px;
+    }
+
+    .sobre,
+    .livros,
+    .unidades,
+    .contatos {
+        padding: 48px 20px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 28px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 30px;
+    }
+
+    .sobre-grade {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .imagem-sobre {
+        height: 240px;
+    }
+
+    .destaques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .cartao-destaque {
+        padding: 18px 14px;
+    }
+
+    .livros-grade {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .livro > img {
+        height: 250px;
+    }
+
+    .livro-info {
+        height: auto;
+        min-height: 190px;
+    }
+
+    .unidade {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .unidade img {
+        height: 220px;
+    }
+
+    .contato-grade {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .contato-texto h2 {
+        font-size: 31px;
+    }
+
+    .contato-imagem {
+        height: 240px;
+    }
+
+    .banner-secundario {
+        height: 220px;
+    }
+}
+
+
+/* === CELULARES PEQUENOS === */
+@media (max-width: 380px) {
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    .cartao-destaque {
+        padding: 18px;
+    }
+
+    .contato-texto h2 {
+        font-size: 28px;
+    }
+}
